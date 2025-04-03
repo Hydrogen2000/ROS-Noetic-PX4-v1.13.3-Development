@@ -14,7 +14,7 @@ wget http://fishros.com/install -O fishros && . fishros
 
 ### (1) 安装ROS
 
-依次选择“一键安装:ROS” -> “更换系统源再继续安装” -> “更换系统源并清理第三方源” -> “noetic(ROS1)” -> “noetic(ROS1)桌面版”，等待下载完成。
+依次选择“一键安装:ROS”->“更换系统源再继续安装”->“更换系统源并清理第三方源”->“noetic(ROS1)”->“noetic(ROS1)桌面版”，等待下载完成。
 
 可以通过运行`roscore`验证安装完成，应该看到类似以下的信息：
 
