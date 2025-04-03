@@ -56,3 +56,24 @@ rosdepc update
 [1] ROS Wiki &nbsp; http://wiki.ros.org/noetic/Installation/Ubuntu
 
 [2] 鱼香ROS社区 &nbsp; https://fishros.org.cn/forum/topic/20/%E5%B0%8F%E9%B1%BC%E7%9A%84%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E7%B3%BB%E5%88%97
+
+## 2. 安装MAVROS
+
+MAVROS是一个ROS功能包，其作用是通过MAVLink协议实现运算平台与飞控的ROS通信。
+
+### (1) 安装mavros和mavros-extras支持
+
+```bash
+sudo apt-get install ros-noetic-mavros ros-noetic-mavros-extras
+```
+
+### (2) 通过官方脚本安装GeographicLib库
+
+```bash
+wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+sudo bash ./install_geographiclib_datasets.sh
+```
+
+### 参考
+
+[1] PX4用户手册(v1.13) &nbsp; https://docs.px4.io/v1.13/en/ros/mavros_installation.html
