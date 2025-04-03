@@ -6,7 +6,7 @@ ROS Noetic + PX4 v1.13.3 Development Environment Setup
 
 ## 1. 鱼香ROS安装ROS
 
-采用鱼香ROS的一键安装脚本，避免繁琐的官网安装步骤和网络连接问题。
+采用鱼香ROS的一键安装脚本，避免繁琐的官网安装步骤和网络连接问题：
 
 ```bash
 wget http://fishros.com/install -O fishros && . fishros
@@ -76,4 +76,35 @@ sudo bash ./install_geographiclib_datasets.sh
 
 ### 参考
 
-[1] PX4用户手册(v1.13) &nbsp; https://docs.px4.io/v1.13/en/ros/mavros_installation.html
+[1] PX4用户文档(v1.13) &nbsp; https://docs.px4.io/v1.13/en/ros/mavros_installation.html
+
+## 3. 安装QGroundControl地面站
+
+QGC是PX4固件支持的地面站调试软件。
+
+### (1) 安装依赖
+
+```bash
+sudo usermod -a -G dialout $USER
+sudo apt-get remove modemmanager -y
+sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
+sudo apt install libfuse2 -y
+sudo apt install libxcb-xinerama0 libxkbcommon-x11-0 libxcb-cursor-dev -y
+```
+
+### (2) 下载软件并赋予运行权限
+
+官网下载链接：https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
+
+下载完成后，赋予软件运行权限：
+
+```bash
+chmod +x ./QGroundControl.AppImage
+```
+
+之后可以通过双击运行软件，或者运行`./QGroundControl.AppImage`。
+
+### 参考
+
+[1] QGC用户文档 &nbsp; https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html
+
